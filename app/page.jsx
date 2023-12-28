@@ -14,14 +14,14 @@ export default async function Page() {
   const data = await getAllCharacters()
 
   return (
-    <main>
+    <main className='bg-black'>
       <Container className="grid grid-cols-2 gap-1 py-5 md:grid-cols-3 lg:grid-cols-4">
         {data?.characters?.map(item => {
           return (
             <Link
               href={`/characters/${item.slug}`}
               key={item.name}
-              className="overflow-hidden rounded-md"
+              className="overflow-hidden rounded-full"
             >
               <Image
                 src={item.avatar}

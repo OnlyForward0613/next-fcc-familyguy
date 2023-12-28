@@ -43,7 +43,7 @@ export const Answer = ({ answers, questionId }) => {
 
   return (
     <>
-      <ul className="grid grid-cols-2 gap-2 md:grid-cols-4">
+      <ul className="grid grid-cols-2 gap-2 md:grid-cols-4 text-white">
         {answers.map(item => {
           const isLoading = selected === item && loading
           const isWrong =
@@ -73,7 +73,7 @@ export const Answer = ({ answers, questionId }) => {
       {data?.random && (
         <Link
           href={`/quiz/${data.random}`}
-          className="flex items-center gap-1 text-blue-400"
+          className="flex items-center gap-1 text-blue-400 font-bold"
         >
           <FiRepeat className="mt-1" />
           Do it again
